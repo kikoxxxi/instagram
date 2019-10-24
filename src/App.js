@@ -17,6 +17,7 @@ class App extends Component {
                 <section>
                   <GlobalStyle />
                   <Header />
+                  {process.env.PUBLIC_URL}
                   <Route path='/' exact component={Home}></Route>
                   <Route path='/explore' exact component={Explore}></Route>
                   <Route path='/p/:shortcode' exact component={Detail}></Route>
