@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { Provider } from 'react-redux';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Header from './common/header';
+import Home from './pages/home';
+import Footer from './common/footer';
+import Explore from './pages/explore';
+import Detail from './pages/detail';
+import store from './store';
+import { GlobalStyle } from './style.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    render() {
+        return (
+            <Provider store={store}>
+              <BrowserRouter>
+                <section>
+                  <GlobalStyle />
+                  <Header />
+                  <Route path='/' exact component={Home}></Route>
+                  <Route path='/explore' exact component={Explore}></Route>
+                  <Route path='/p/:shortcode' exact component={Detail}></Route>
+                  <Footer />
+                </section>
+              </BrowserRouter>
+            </Provider>
+        );
+    }
 }
 
 export default App;

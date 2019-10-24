@@ -1,0 +1,128 @@
+{
+  "id": "1449486",
+  "name": "instagram",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "169854",
+      "name": "书签",
+      "font_class": "shuqian",
+      "unicode": "e6a4",
+      "unicode_decimal": 59044
+    },
+    {
+      "icon_id": "215709",
+      "name": "人",
+      "font_class": "ren",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "440909",
+      "name": "聊天",
+      "font_class": "liaotian",
+      "unicode": "e709",
+      "unicode_decimal": 59145
+    },
+    {
+      "icon_id": "2667100",
+      "name": "上一个",
+      "font_class": "shangyige",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "3141341",
+      "name": "省略号",
+      "font_class": "shenglvehao",
+      "unicode": "e639",
+      "unicode_decimal": 58937
+    },
+    {
+      "icon_id": "4692395",
+      "name": "放大镜",
+      "font_class": "fangdajing",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "4731612",
+      "name": "下一个",
+      "font_class": "xiayige",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "4756400",
+      "name": "省略号",
+      "font_class": "shenglvehao1",
+      "unicode": "e79d",
+      "unicode_decimal": 59293
+    },
+    {
+      "icon_id": "5280516",
+      "name": "爱心",
+      "font_class": "aixin11-copy",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "6253001",
+      "name": "instagram",
+      "font_class": "instagram",
+      "unicode": "e76a",
+      "unicode_decimal": 59242
+    },
+    {
+      "icon_id": "6850743",
+      "name": "勾",
+      "font_class": "gouSolid-copy",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "7037146",
+      "name": "上传",
+      "font_class": "shangchuan",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "7420910",
+      "name": "指南针",
+      "font_class": "zhinanzhen",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "7438119",
+      "name": "井号",
+      "font_class": "jinghao",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "8611074",
+      "name": "聊天",
+      "font_class": "liaotian1",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "9191464",
+      "name": "爱心",
+      "font_class": "aixin",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "9820058",
+      "name": "错误",
+      "font_class": "cuowu",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    }
+  ]
+}

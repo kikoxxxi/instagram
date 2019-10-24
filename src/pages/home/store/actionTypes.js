@@ -1,0 +1,1 @@
+export const GET_SUGGESTED_USERS='home/GET_SUGGESTED_USERS';
