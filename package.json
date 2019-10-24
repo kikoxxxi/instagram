@@ -2,7 +2,7 @@
   "name": "instagram",
   "version": "0.1.0",
   "private": true,
-  "homepage": "./",
+  "homepage": "https://kikoxxxi.github.io/instagram",
   "dependencies": {
     "axios": "^0.19.0",
     "immutable": "^4.0.0-rc.12",
