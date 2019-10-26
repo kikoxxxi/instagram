@@ -2,6 +2,10 @@ import * as types from './actionTypes';
 import { fromJS } from 'immutable';
 import axios from 'axios';
 
+axios.defaults.baseURL = 'https://kikoxxxi.github.io/instagram';
+;
+
+
 const getSuggestedUsersAction = (users) => ({
     type: types.GET_SUGGESTED_USER_LIST,
     users: fromJS(users)

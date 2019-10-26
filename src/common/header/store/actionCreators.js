@@ -2,6 +2,7 @@ import * as types from './actionTypes';
 import { fromJS } from 'immutable';
 import axios from 'axios';
 
+axios.defaults.baseURL = 'https://kikoxxxi.github.io/instagram';
 
 export const searchFocusAction = () => ({
     type: types.SEARCH_FOCUS
