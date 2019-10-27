@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { IconfontStyle } from '../../statics/iconfont/iconfont';
 import { connect } from 'react-redux';
-import { debounce } from 'lodash';
+// import { debounce } from 'lodash';
 import { actionCreators } from './store';
 import SearchInfoList from './SearchInfoList';
+
 import {
     NavWrapper,
     NavContent,
@@ -27,7 +28,7 @@ from './style';
 class Header extends Component {
 
     render() {
-        const { focused, inputValue, toggle, userInfoList, tagList, handleSearchFocus, handlSearchBlur, handleSearchChange } = this.props;
+        const { focused, inputValue, toggle, handleSearchFocus, handlSearchBlur, handleSearchChange } = this.props;
         return (
             <NavWrapper className={toggle ? 'toggle':''}>
             <IconfontStyle/>
@@ -59,7 +60,7 @@ class Header extends Component {
                         </NoFocuseInputWrapper>
                         <i id='glass-icon' className={focused ? 'focused iconfont' : 'hidden iconfont'}>&#xe604;</i>
                         <i id='clear-icon' className={focused ? 'focused iconfont' : 'hidden iconfont'}>&#xe62a;</i>
-                        <SearchInfoList focused={focused} inputValue={inputValue} userInfoList={userInfoList} tagList={tagList}/>
+                        <SearchInfoList/>
                     </SearchWrapper>
                     <AditionWrapper>
                         <AditionContent>
@@ -83,14 +84,21 @@ class Header extends Component {
     }
 }
 
+const myDebounce = (fun, duration) => {
+    let timer = null;
+    return (...args) => {
+        if (timer) {
+            clearTimeout(timer);
+        }
+        timer = setTimeout(()=>fun(...args), duration);
+    }
+}
 
 const mapState = (state) => {
     return {
         focused: state.getIn(['header', 'focused']),
         inputValue: state.getIn(['header', 'inputValue']),
-        toggle: state.getIn(['header', 'toggle']),
-        userInfoList: state.getIn(['header', 'userInfoList']),
-        tagList: state.getIn(['header', 'tagList'])
+        toggle: state.getIn(['header', 'toggle'])
     }
 };
 
@@ -104,7 +112,7 @@ const mapDispatch = (dispatch) => {
         handlSearchBlur() {
             dispatch(actionCreators.searchBlurAction());
         },
-        handleSearchChange: debounce((e) => {
+        handleSearchChange: myDebounce((e) => {
             dispatch(actionCreators.getSearchList(e.target.value));
         }, 300),
         changeScrollHeader() {

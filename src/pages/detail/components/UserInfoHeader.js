@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
+
 import {
     HeaderWrapper,
     AvatarWrapper,
@@ -21,7 +22,7 @@ class userInfoHeader extends Component {
         return (
             <HeaderWrapper>
                 <AvatarWrapper>
-                    <Img alt={userName+' 的头像'} src={profilePicUrl}/>
+                    <Img alt={userName? userName+' 的头像':''} src={profilePicUrl? profilePicUrl:''}/>
                 </AvatarWrapper>
                 <PersonalDetailsWrapper>
                     <NameWrapper>

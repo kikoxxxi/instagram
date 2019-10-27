@@ -98,13 +98,21 @@ class Discover extends Component {
 
     componentDidMount() {
         this.loadImg();
-        window.addEventListener('scroll', debounce(this.loadImg, 100));
+        window.addEventListener('scroll', this.debounceLoad);
+    };
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.debounceLoad);
     }
 
     loadImg = () => {
         const { loadDiscoverImg, page } = this.props;
         loadDiscoverImg(page);
     }
+
+    debounceLoad = debounce(() => {
+        this.loadImg()
+    }, 300)
 };
 
 const mapState = (state) => ({

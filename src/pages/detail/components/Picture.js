@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import LazyLoad from 'react-lazyload';
 
 
 import {
@@ -23,13 +22,11 @@ class Picture extends Component {
                         role='button' 
                         tabindex='0'
                         style={{paddingBottom: padding}}>
-                        <LazyLoad once={true}>
                         <Img 
                             sizes='calc(.8 * 100vw)' 
                             srcSet={srcset.join(',')}
                             alt={accessibilityCaption} 
                             src={displayUrl}/>
-                        </LazyLoad>
                     </ImgWrapper>
                     <div></div>
                 </div>
